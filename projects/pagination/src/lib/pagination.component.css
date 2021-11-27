@@ -1,0 +1,36 @@
+.pagination-botton{
+    display: flex;
+    flex-wrap: nowrap;
+}
+ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+  background-color: green;
+  width: 48px;
+  color: #fff;
+  text-align: center;
+ 
+}
+button{
+    background-color: blue;
+    color: #fff;
+    width: 40px;
+    border: 0;
+    box-shadow: none;
+}
+button:hover{
+    background-color: rgb(181, 181, 252);
+}
+.page-item.active .page-link {
+    background-color: rgb(56, 122, 17);
+    border-color: blue;
+    color: #fff;
+}
+.page-link {
+
+    color: #fff;
+}

@@ -1,0 +1,6 @@
+
+<ul *ngFor="let item of paginationSlice(currPage, currPageSize)">
+  <li>item</li>
+</ul>
+
+<app-pagination  [pageNumber]="currPage" [pageSize]="currPageSize" [totalRecord]="data.length" (btnClick)="syncPage($event)"> </app-pagination> 

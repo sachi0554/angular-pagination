@@ -1,0 +1,13 @@
+<div *ngIf="totalRecord > 0" class="pagination-botton">
+  <ul class="pagination">
+      <li [ngClass]="{'disabled' : pageNumber <= 1 }" class="page-item"><a class="page-link" herf="#" (click)="previous(pageNumber-1)"><<<span class="sr-only"> </span></a></li>     
+      <ng-container *ngFor="let item of arrayIndex;  let i = index" >
+      <li class="page-item " [ngClass]="{'active' : (i+1 === pageNumber || pageNumber === i+pageSwapping) }" *ngIf="i + pageSwapping <= totalPaginationSize" ><a class="page-link" herf="#" (click)="click(i+pageSwapping)">{{i+pageSwapping}} <span class="sr-only"> </span></a></li>
+      </ng-container>
+      <li *ngIf="pageSwapping+2  < totalPaginationSize "  class="page-item"><a class="page-link" herf="#" (click)="addPages()">... <span class="sr-only"> </span></a></li>     
+      <li [ngClass]="{'disabled' : pageNumber >= totalPaginationSize}" class="page-item"><a class="page-link" herf="#" (click)="next(pageNumber+1)">>><span class="sr-only"> </span></a></li>     
+  </ul>
+</div>
+
+
+<!-- <app-pagination  [pageNumber]="currPage" [pageSize]="currPageSize" [totalRecord]="reviewData.length" (onClick)="syncPage($event)"> </app-pagination>    -->
